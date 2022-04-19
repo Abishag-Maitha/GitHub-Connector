@@ -1,11 +1,13 @@
-<div class="row">
-    <div class="col-md-4">
+<div class="row repo">
+    <div class=" col-12 col-md-4">
         <p>Username: <span>{{profiles.login}}</span></p>
         <div class="profile"><img src="{{profiles.avatar_url}}" alt=""></div>
     </div>
-    <div class="col-md-8">
+    <div class="col-12 col-md-8">
         <div>
-            <p *ngIf="profiles.bio"><strong>Bio:</strong> <span>{{profiles.bio}</span></p>
+            <p *ngIf="profiles.bio"><strong class="me-1">Bio:</strong> <span>{{profiles.bio}}</span></p>
+            <p *ngIf="profiles.email"><i class="fa-solid fa-envelope me-2 text-warning"></i><span>{{profiles.email}}</span></p>
+            <p *ngIf="profiles.location"><i class="fa-solid fa-location-dot me-2"></i> <span>{{profiles.location}}</span></p>
         </div>
     </div>
 </div>
