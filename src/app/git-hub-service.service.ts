@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class GitHubServiceService {
-username="Abishag-Maitha"
+username="kirandash"
   constructor(private http:HttpClient) { }
   getUsers():Observable<any>{
     const url=`https://api.github.com/users/${this.username}`

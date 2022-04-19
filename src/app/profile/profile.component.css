@@ -2,3 +2,7 @@
     width: 150px;
     border-radius: 50%;
 }
+.repo{
+    background-color: teal;
+    color: red;
+}
