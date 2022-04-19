@@ -6,3 +6,9 @@
     background-color: teal;
     color: red;
 }
+.followers p{
+    background-color: white;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 3px;
+}
