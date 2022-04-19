@@ -45,8 +45,8 @@
   </div>
 </div>
 <!-- User Repos section-->
-<div>
-    <div>
-        
+<div class="repo-info">
+    <div *ngFor="let repo of repos" class="name p-5">
+        <h6>{{repo.name}}</h6>
     </div>
 </div>
