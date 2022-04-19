@@ -33,7 +33,20 @@
       </p>
     </div>
     <div>
-        <p></p>
+        <p *ngIf="profiles.fork"><i class="fa-solid fa-code-fork"></i> <span>{{profiles.fork}}</span></p>
+        <p><strong class="me-2">Public Repos</strong> <span>{{profiles.public_repos}}</span></p>
+        <p><strong class="me-1">Created at:</strong> <span>{{profiles.created_at|date}}</span></p>
     </div>
+    <div class="text-center">
+        <a class="btn btn-outline-danger" target="blank" href="{{profiles.html_url}}">View Profile</a>
+
+    </div>
+
   </div>
+</div>
+<!-- User Repos section-->
+<div>
+    <div>
+        
+    </div>
 </div>
