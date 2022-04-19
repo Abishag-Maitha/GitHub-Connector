@@ -33,7 +33,6 @@
       </p>
     </div>
     <div>
-        <p *ngIf="profiles.fork"><i class="fa-solid fa-code-fork"></i> <span>{{profiles.fork}}</span></p>
         <p><strong class="me-2">Public Repos</strong> <span>{{profiles.public_repos}}</span></p>
         <p><strong class="me-1">Created at:</strong> <span>{{profiles.created_at|date}}</span></p>
     </div>
@@ -48,5 +47,14 @@
 <div class="repo-info">
     <div *ngFor="let repo of repos" class="name p-5">
         <h6>{{repo.name}}</h6>
+        <p *ngIf="repo.description"><strong class="me-1">Repo Description</strong><span>{{repo.description}}</span></p>
+        <div class="d-flex justify-content-around"> 
+            <p><i class="fa-solid fa-code-fork"></i> <span>{{repo.forks}}</span></p>
+            <p><strong class="me-2">Language:</strong> <span>{{repo.language}}</span></p>
+        </div>
+        <div>
+            <a href="{{repo.html_url}}" class="btn btn-outline-success" target="blank">View Repo</a>
+        </div>
     </div>
+    
 </div>
