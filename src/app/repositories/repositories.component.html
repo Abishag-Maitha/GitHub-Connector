@@ -3,7 +3,7 @@
     <input type="email" class="form-control w-75 mx-auto" id="email" name="search" [(ngModel)]="search" (keyup)="getrepositories()">
 </div>
 
-<ul class="list-group">
+<ul class="list-group ul-style">
     <ul *ngFor="let repo of repos" class="list-group" >
         <li *ngIf="search" class="list-group-item py-5">
         <div class="row">
