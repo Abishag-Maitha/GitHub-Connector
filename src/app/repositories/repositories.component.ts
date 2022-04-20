@@ -8,13 +8,16 @@ import { GitHubServiceService } from '../git-hub-service.service';
 })
 export class RepositoriesComponent implements OnInit {
   repos:any
+  search!:string
   constructor(private service:GitHubServiceService) {
     this.getrepositories()
    }
 
   ngOnInit(): void {
   }
+
  getrepositories(){
+   this.service.updateSearchTerm(this.search)
    this.service.searchRepos().subscribe((repo)=>{
     console.log(repo.items)
     this.repos=repo.items

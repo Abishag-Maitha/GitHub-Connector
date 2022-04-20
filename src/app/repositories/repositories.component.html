@@ -1,3 +1,7 @@
+<div class="mb-3 mt-4">
+    <label for="email" class="form-label">Enter repo name</label>
+    <input type="email" class="form-control" id="email" name="search" [(ngModel)]="search" (keyup)="getrepositories()">
+</div>
 
 <ul class="list-group">
     <li class="list-group-item text-success text-center p-3" aria-current="true">Repositories</li>

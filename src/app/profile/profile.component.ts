@@ -9,6 +9,7 @@ import { GitHubServiceService } from '../git-hub-service.service';
 export class ProfileComponent implements OnInit {
 profiles:any
 repos:any
+search!:string
   constructor(private gitservice:GitHubServiceService) {
     // this.userprofiles()
     // this.userrepos()

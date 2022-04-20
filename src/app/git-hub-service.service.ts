@@ -7,8 +7,8 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class GitHubServiceService {
-username="kirandash"
-searchTerm="pizza"
+username!:string
+searchTerm!:string
   constructor(private http:HttpClient) { }
   getUsers():Observable<any>{
     const url=`https://api.github.com/users/${this.username}`
@@ -22,5 +22,11 @@ searchTerm="pizza"
   searchRepos():Observable<any>{
     const url=`https://api.github.com/search/repositories?q=${this.searchTerm}`
     return this.http.get<any>(url)
+  }
+  updateSearchTerm(value:string){
+    this.searchTerm=value
+  }
+  updateUserName(value:string){
+    this.username=value
   }
 }
