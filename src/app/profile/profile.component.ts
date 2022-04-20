@@ -10,8 +10,8 @@ export class ProfileComponent implements OnInit {
 profiles:any
 repos:any
   constructor(private gitservice:GitHubServiceService) {
-    this.userprofiles()
-    this.userrepos()
+    // this.userprofiles()
+    // this.userrepos()
    }
 
   ngOnInit(): void {

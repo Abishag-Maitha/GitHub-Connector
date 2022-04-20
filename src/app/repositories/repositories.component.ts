@@ -16,8 +16,8 @@ export class RepositoriesComponent implements OnInit {
   }
  getrepositories(){
    this.service.searchRepos().subscribe((repo)=>{
-    this.repos=repo.items
     console.log(repo.items)
-   })
+    this.repos=repo.items
+  })
  }
 }

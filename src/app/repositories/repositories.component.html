@@ -1,1 +1,12 @@
-<p>repositories works!</p>
+
+<ul class="list-group">
+    <li class="list-group-item text-success text-center p-3" aria-current="true">Repositories</li>
+    <ul *ngFor="let repo of repos" class="list-group">
+        <li class="list-group-item py-5">
+            <div class="repo-details">
+                <p><strong class="me-2">Repo Name</strong><span>{{repo.name}}</span></p>
+                <img src="{{repo.owner.avatar_url}}" alt="">
+            </div>
+        </li>
+    </ul>
+</ul>
