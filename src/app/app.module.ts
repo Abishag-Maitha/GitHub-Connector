@@ -9,13 +9,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { GitHubServiceService } from './git-hub-service.service';
+import { DaysCountPipe } from './days-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     RepositoriesComponent,
-    NavbarComponent
+    NavbarComponent,
+    DaysCountPipe
   ],
   imports: [
     BrowserModule,

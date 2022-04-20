@@ -3,10 +3,28 @@
     <li class="list-group-item text-success text-center p-3" aria-current="true">Repositories</li>
     <ul *ngFor="let repo of repos" class="list-group">
         <li class="list-group-item py-5">
-            <div class="repo-details">
+        <div class="row">
+            <div class="repo-details col-md-4">
                 <p><strong class="me-2">Repo Name</strong><span>{{repo.name}}</span></p>
                 <img src="{{repo.owner.avatar_url}}" alt="">
+                <p><strong class="me-2">Owner</strong> <span class="text-success">{{repo.owner.login}}</span></p>
             </div>
+            <div class="col-md-8">
+                <p><strong class="me-2">Created at:</strong><span>{{repo.created_at|date}}</span></p>
+                <p class="p-5"><strong class="me-2">Description:</strong><span>{{repo.description}}</span></p>
+                <div>
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-outline-info"><i class="fa-solid fa-code-fork me-2"></i>{{repo.forks}}</button>
+                        
+                        <button type="button" class="btn btn-outline-info"><i class="fa-solid fa-circle-arrow-down me-2"></i><a href={{repo.downloads_url}} target="blank">
+                        </a></button>
+                        
+                        <button type="button" class="btn btn-outline-info"><i class="fa-solid fa-clone me-2"></i> <a href={{repo.clone_url}} target="blank">
+                        </a></button>
+                      </div>
+                </div>
+            </div>
+        </div>
         </li>
     </ul>
 </ul>
