@@ -1,9 +1,9 @@
-<div class="mb-3 mt-4">
-  <label for="email" class="form-label">Enter username</label>
-  <input type="email" class="form-control" id="email" name="account" [(ngModel)]="account" (keyup)="userprofiles()" (keypress)="userrepos()">
+<div class="mb-3 mt-4 w-75 mx-auto">
+  <label for="email" class="form-label text-center mx-auto w-75 mb-4">Enter GitHub username</label>
+  <input type="email" class="form-control w-75 mx-auto" id="email" name="account" [(ngModel)]="account" (keyup)="userprofiles()" (keypress)="userrepos()">
 </div>
 
-<div class="row repo">
+<div class="row repo" *ngIf="profiles">
   <div class="col-12 col-md-4">
     <p>
       Username: <span>{{ profiles.login }}</span>
