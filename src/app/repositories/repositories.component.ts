@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GitHubServiceService } from '../git-hub-service.service';
 
 @Component({
   selector: 'app-repositories',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./repositories.component.css']
 })
 export class RepositoriesComponent implements OnInit {
-
-  constructor() { }
+  repos:any
+  constructor(private service:GitHubServiceService) {
+    this.getrepositories()
+   }
 
   ngOnInit(): void {
   }
-
+ getrepositories(){
+   this.service.searchRepos().subscribe((repo)=>{
+    this.repos=repo.items
+    console.log(repo.items)
+   })
+ }
 }
