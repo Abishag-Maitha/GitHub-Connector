@@ -10,9 +10,9 @@
                 <p><strong class="me-2">Owner</strong> <span class="text-success">{{repo.owner.login}}</span></p>
             </div>
             <div class="col-md-8">
-                <p><strong class="me-2">Created at:</strong><span>{{repo.created_at|date}}</span></p>
+                <p><strong class="me-2">Created at:</strong><span>{{repo.created_at|date|daysCount}}</span></p>
                 <p class="p-5"><strong class="me-2">Description:</strong><span>{{repo.description}}</span></p>
-                <div>
+                <div class="text-center mb-3">
                     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                         <button type="button" class="btn btn-outline-info"><i class="fa-solid fa-code-fork me-2"></i>{{repo.forks}}</button>
                         
@@ -22,6 +22,13 @@
                         <button type="button" class="btn btn-outline-info"><i class="fa-solid fa-clone me-2"></i> <a href={{repo.clone_url}} target="blank">
                         </a></button>
                       </div>
+                </div>
+                <div class="text-center d-flex justify-content-around">
+                    <p class="p-4 bg-warning rounded"><strong class="me-2">Watchers</strong><span>{{repo.watchers}}</span></p>
+                    <p class="p-4 bg-warning rounded"><strong class="me-2">Visibility</strong><span>{{repo.visibility}}</span></p>
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-outline-warning" href="{{repo.html_url}}" target="blank">View Repo</a>
                 </div>
             </div>
         </div>
