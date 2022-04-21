@@ -3,6 +3,9 @@
   <input type="email" class="form-control w-75 mx-auto" id="email" name="account" [(ngModel)]="account" (keyup)="userprofiles()" (keypress)="userrepos()">
 </div>
 
+<div class="row repo-style">
+
+
 <div class="row repo" *ngIf="profiles">
   <div class="col-12 col-md-4">
     <p>
@@ -62,4 +65,5 @@
         </div>
     </div>
     
+</div>
 </div>
